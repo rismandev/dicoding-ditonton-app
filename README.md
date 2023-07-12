@@ -1,8 +1,28 @@
-# a199-flutter-expert-project
+# Dicoding Submission - Ditonton App
 
-Repository ini merupakan starter project submission kelas Flutter Expert Dicoding Indonesia.
+Repository ini merupakan projek submission awal kelas Dicoding Flutter Developer Expert
 
----
+
+## Informasi Penting
+
+1. Repository ini telah di update sesuai flutter versi 3.10
+2. Dart SDK telah di update menjadi "3.0.3 <= 4.0.0"
+3. Versi dari beberapa dependencies telah di upgrade.
+
+
+## Run Build Runner
+
+To run `build_runner` for generate dependency injection, data class, sealed class, etc, run:
+
+```bash
+    dart run build_runner build --delete-conflicting-outputs
+```
+
+if you want to continuously run:
+
+```bash
+    dart run build_runner watch --delete-conflicting-outputs
+```
 
 ## Tips Submission Awal
 
