@@ -1,5 +1,5 @@
 import 'package:ditonton/features/movie/data/models/movie_table.dart';
-import 'package:ditonton/features/movie/domain/entities/genre.dart';
+import 'package:ditonton/features/genre/domain/entities/genre.dart';
 import 'package:ditonton/features/movie/domain/entities/movie.dart';
 import 'package:ditonton/features/movie/domain/entities/movie_detail.dart';
 

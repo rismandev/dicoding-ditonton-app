@@ -1,3 +1,6 @@
+import 'package:ditonton/features/tv_series/data/datasources/tv_series_local_data_source.dart';
+import 'package:ditonton/features/tv_series/data/datasources/tv_series_remote_data_source.dart';
+import 'package:ditonton/features/tv_series/domain/repositories/tv_series_repository.dart';
 import 'package:http/http.dart' as http;
 import 'package:get_it/get_it.dart';
 
@@ -22,6 +25,8 @@ import 'features/movie/presentation/provider/movie_search_notifier.dart';
 import 'features/movie/presentation/provider/popular_movies_notifier.dart';
 import 'features/movie/presentation/provider/top_rated_movies_notifier.dart';
 import 'features/movie/presentation/provider/watchlist_movie_notifier.dart';
+import 'features/tv_series/data/datasources/db/database_helper.dart';
+import 'features/tv_series/data/repositories/tv_series_repository_impl.dart';
 
 final locator = GetIt.instance;
 
@@ -83,15 +88,26 @@ void init() {
       localDataSource: locator(),
     ),
   );
+  locator.registerLazySingleton<TvSeriesRepository>(
+    () => TvSeriesRepositoryImpl(
+      remoteDataSource: locator(),
+      localDataSource: locator(),
+    ),
+  );
 
   // data sources
   locator.registerLazySingleton<MovieRemoteDataSource>(
       () => MovieRemoteDataSourceImpl(client: locator()));
   locator.registerLazySingleton<MovieLocalDataSource>(
       () => MovieLocalDataSourceImpl(databaseHelper: locator()));
+  locator.registerLazySingleton<TvSeriesRemoteDataSource>(
+      () => TvSeriesRemoteDataSourceImpl(client: locator()));
+  locator.registerLazySingleton<TvSeriesLocalDataSource>(
+      () => TvSeriesLocalDataSourceImpl(databaseHelper: locator()));
 
   // helper
-  locator.registerLazySingleton<DatabaseHelper>(() => DatabaseHelper());
+  locator.registerLazySingleton<MovieDBHelper>(() => MovieDBHelper());
+  locator.registerLazySingleton<TvSeriesDBHelper>(() => TvSeriesDBHelper());
 
   // external
   locator.registerLazySingleton(() => http.Client());

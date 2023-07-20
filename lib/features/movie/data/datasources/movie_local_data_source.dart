@@ -11,7 +11,7 @@ abstract class MovieLocalDataSource {
 }
 
 class MovieLocalDataSourceImpl implements MovieLocalDataSource {
-  final DatabaseHelper databaseHelper;
+  final MovieDBHelper databaseHelper;
 
   MovieLocalDataSourceImpl({required this.databaseHelper});
 

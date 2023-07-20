@@ -4,13 +4,13 @@ import 'package:sqflite/sqflite.dart';
 
 import '../../models/movie_table.dart';
 
-class DatabaseHelper {
-  static DatabaseHelper? _databaseHelper;
-  DatabaseHelper._instance() {
+class MovieDBHelper {
+  static MovieDBHelper? _databaseHelper;
+  MovieDBHelper._instance() {
     _databaseHelper = this;
   }
 
-  factory DatabaseHelper() => _databaseHelper ?? DatabaseHelper._instance();
+  factory MovieDBHelper() => _databaseHelper ?? MovieDBHelper._instance();
 
   static Database? _database;
 

@@ -1,0 +1,30 @@
+{
+  "page": 1,
+  "results": [
+    {
+      "adult": false,
+      "backdrop_path": "/path.jpg",
+      "id": 1,
+      "name": "Name 1",
+      "original_language": "en",
+      "original_name": "Name 1",
+      "overview": "Overview 1",
+      "poster_path": "/path.jpg",
+      "media_type": "tv",
+      "genre_ids": [
+        1,
+        2,
+        4
+      ],
+      "popularity": 9.85,
+      "first_air_date": "2016-07-15",
+      "vote_average": 8.25,
+      "vote_count": 110,
+      "origin_country": [
+        "US"
+      ]
+    }
+  ],
+  "total_pages": 2,
+  "total_results": 40
+}

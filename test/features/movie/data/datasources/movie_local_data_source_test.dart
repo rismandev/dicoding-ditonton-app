@@ -1,4 +1,5 @@
 import 'package:ditonton/common/exception.dart';
+import 'package:ditonton/features/movie/data/datasources/db/database_helper.dart';
 import 'package:ditonton/features/movie/data/datasources/movie_local_data_source.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
@@ -8,10 +9,10 @@ import '../../dummy_data/dummy_objects.dart';
 
 void main() {
   late MovieLocalDataSourceImpl dataSource;
-  late MockDatabaseHelper mockDatabaseHelper;
+  late MovieDBHelper mockDatabaseHelper;
 
   setUp(() {
-    mockDatabaseHelper = MockDatabaseHelper();
+    mockDatabaseHelper = MockMovieDBHelper();
     dataSource = MovieLocalDataSourceImpl(databaseHelper: mockDatabaseHelper);
   });
 

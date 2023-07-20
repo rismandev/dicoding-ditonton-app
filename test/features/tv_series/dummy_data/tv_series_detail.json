@@ -1,0 +1,43 @@
+{
+  "id": 1,
+  "adult": false,
+  "backdrop_path": "/path.jpg",
+  "first_air_date": "2023-05-08",
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drama"
+    }
+  ],
+  "homepage": "http://gshow.com/terraepaixao",
+  "in_production": true,
+  "last_air_date": "2023-07-19",
+  "name": "Ojek pengkolan",
+  "number_of_episodes": 100,
+  "number_of_seasons": 1,
+  "origin_country": [
+    "ID"
+  ],
+  "original_language": "id",
+  "original_name": "Ojek pengkolan",
+  "overview": "Film layar lebar",
+  "popularity": 10.5,
+  "poster_path": "/path.jpg",
+  "seasons": [
+    {
+      "air_date": "2023-05-08",
+      "episode_count": 100,
+      "id": 1,
+      "name": "Season 1",
+      "overview": "season pertama",
+      "poster_path": "/path.jpg",
+      "season_number": 1,
+      "vote_average": 8.0
+    }
+  ],
+  "status": "Returning Series",
+  "tagline": "series",
+  "type": "Scripted",
+  "vote_average": 10.5,
+  "vote_count": 100
+}
