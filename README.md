@@ -10,19 +10,38 @@ Repository ini merupakan projek submission awal kelas Dicoding Flutter Developer
 3. Versi dari beberapa dependencies telah di upgrade.
 
 
-## Run Build Runner
+## Langkah Konfigurasi
 
-To run `build_runner` for generate dependency injection, data class, sealed class, etc, run:
-
+1. Install dependencies
+```bash
+    flutter pub get
+```
+2. Menjalankan Build Runner
 ```bash
     dart run build_runner build --delete-conflicting-outputs
 ```
-
-if you want to continuously run:
-
+atau
 ```bash
     dart run build_runner watch --delete-conflicting-outputs
 ```
+3. Run Flutter
+
+
+## Melihat Hasil Testing
+
+1. Menjalankan Semua Proses Test
+```bash
+    flutter test --coverage
+```
+2. Membuat test coverage dalam bentuk html format
+```bash
+    genhtml coverage/lcov.info -o coverage/html
+```
+3. Melihat hasil coverage
+```bash
+    open coverage/html/index.html
+```
+
 
 ## Tips Submission Awal
 
