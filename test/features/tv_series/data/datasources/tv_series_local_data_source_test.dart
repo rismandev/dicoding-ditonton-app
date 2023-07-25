@@ -79,7 +79,7 @@ void main() {
   });
 
   group('Get TV Series Detail By Id', () {
-    final tId = 1;
+    const tId = 1;
 
     test(
       'should return TV Series Detail Table when data is found',

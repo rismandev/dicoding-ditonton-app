@@ -7,7 +7,7 @@ import 'package:flutter_test/flutter_test.dart';
 import '../../../../json_reader.dart';
 
 void main() {
-  final tSeriesModel = TvSeriesModel(
+  const tSeriesModel = TvSeriesModel(
     backdropPath: "/aWPhMZ0P2DyfWB7k5NXhGHSZHGC.jpg",
     firstAirDate: "2023-05-08",
     genreIds: [18, 80, 10766],
@@ -23,7 +23,7 @@ void main() {
     voteCount: 43,
   );
 
-  final tSeriesResponseModel = TvSeriesResponse(
+  const tSeriesResponseModel = TvSeriesResponse(
     tvSeriesList: <TvSeriesModel>[tSeriesModel],
   );
 

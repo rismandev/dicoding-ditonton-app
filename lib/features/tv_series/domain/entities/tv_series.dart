@@ -6,11 +6,11 @@ class TvSeries extends Equatable {
   String? firstAirDate;
   List<int>? genreIds;
   int id;
-  String? name;
+  String name;
   List<String>? originCountry;
   String? originalLanguage;
   String? originalName;
-  String? overview;
+  String overview;
   double? popularity;
   String? posterPath;
   double? voteAverage;

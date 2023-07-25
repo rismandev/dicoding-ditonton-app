@@ -10,31 +10,13 @@ class TvSeriesTable extends Equatable {
   final String? overview;
   final String? firstAirDate;
 
-  TvSeriesTable({
+  const TvSeriesTable({
     required this.id,
     required this.name,
     required this.posterPath,
     required this.overview,
     required this.firstAirDate,
   });
-
-  factory TvSeriesTable.fromEntity(TvSeriesDetail tvSeries) => TvSeriesTable(
-        id: tvSeries.id,
-        name: tvSeries.name,
-        posterPath: tvSeries.posterPath,
-        overview: tvSeries.overview,
-        firstAirDate: tvSeries.firstAirDate,
-      );
-
-  Map<String, dynamic> toMap() {
-    return <String, dynamic>{
-      'id': id,
-      'name': name,
-      'posterPath': posterPath,
-      'overview': overview,
-      'firstAirDate': firstAirDate,
-    };
-  }
 
   factory TvSeriesTable.fromMap(Map<String, dynamic> map) {
     return TvSeriesTable(
@@ -46,13 +28,27 @@ class TvSeriesTable extends Equatable {
     );
   }
 
+  Map<String, dynamic> toMap() => {
+        'id': id,
+        'name': name,
+        'posterPath': posterPath,
+        'overview': overview,
+        'firstAirDate': firstAirDate
+      };
+
+  factory TvSeriesTable.fromEntity(TvSeriesDetail tvSeries) => TvSeriesTable(
+      id: tvSeries.id,
+      name: tvSeries.name,
+      posterPath: tvSeries.posterPath,
+      overview: tvSeries.overview,
+      firstAirDate: tvSeries.firstAirDate);
+
   TvSeries toEntity() => TvSeries.watchlist(
-        id: id,
-        overview: overview,
-        posterPath: posterPath,
-        name: name,
-        firstAirDate: firstAirDate,
-      );
+      id: id,
+      overview: overview ?? '',
+      posterPath: posterPath,
+      name: name ?? '',
+      firstAirDate: firstAirDate);
 
   @override
   List<Object?> get props => [id, name, posterPath, overview, firstAirDate];

@@ -1,21 +1,21 @@
 import 'package:ditonton/common/constants.dart';
 import 'package:ditonton/common/utils.dart';
 import 'package:ditonton/features/movie/presentation/pages/home_movie_page.dart';
-import 'package:ditonton/list_providers.dart';
+import 'package:ditonton/init_provider.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:ditonton/injection.dart' as di;
 
 void main() {
   di.init();
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MultiProvider(
-      providers: listProviders,
+    return InitProviderWidget(
       child: MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData.dark().copyWith(
@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
           textTheme: kTextTheme,
         ),
         navigatorObservers: [routeObserver],
-        initialRoute: HomeMoviePage.ROUTE_NAME,
+        initialRoute: HomeMoviePage.routeName,
         onGenerateRoute: onGenerateRoute,
       ),
     );

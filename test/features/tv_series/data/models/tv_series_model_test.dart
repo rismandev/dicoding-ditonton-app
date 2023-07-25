@@ -3,7 +3,7 @@ import 'package:ditonton/features/tv_series/domain/entities/tv_series.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
-  final tSeriesModel = TvSeriesModel(
+  const tSeriesModel = TvSeriesModel(
     backdropPath: "/path.jpg",
     firstAirDate: "2023-07-20",
     genreIds: [1, 2, 3],
@@ -22,10 +22,10 @@ void main() {
   final tSeries = TvSeries(
     backdropPath: "/path.jpg",
     firstAirDate: "2023-07-20",
-    genreIds: [1, 2, 3],
+    genreIds: const [1, 2, 3],
     id: 1,
     name: "Test 1",
-    originCountry: ["id"],
+    originCountry: const ["id"],
     originalLanguage: "id",
     originalName: "Test 1",
     overview: "Coba 1",
