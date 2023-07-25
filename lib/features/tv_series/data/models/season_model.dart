@@ -11,7 +11,7 @@ class SeasonModel extends Equatable {
   final int? seasonNumber;
   final double? voteAverage;
 
-  SeasonModel({
+  const SeasonModel({
     this.airDate,
     this.episodeCount,
     this.id,

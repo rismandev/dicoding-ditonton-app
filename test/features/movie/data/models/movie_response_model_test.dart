@@ -6,7 +6,7 @@ import 'package:flutter_test/flutter_test.dart';
 import '../../../../json_reader.dart';
 
 void main() {
-  final tMovieModel = MovieModel(
+  const tMovieModel = MovieModel(
     adult: false,
     backdropPath: "/qWQSnedj0LCUjWNp9fLcMtfgadp.jpg",
     genreIds: [28, 12, 878],
@@ -22,8 +22,11 @@ void main() {
     voteAverage: 7.3,
     voteCount: 1431,
   );
-  final tMovieResponseModel =
-      MovieResponse(movieList: <MovieModel>[tMovieModel]);
+
+  const tMovieResponseModel = MovieResponse(
+    movieList: <MovieModel>[tMovieModel],
+  );
+
   group('fromJson', () {
     test('should return a valid model from JSON', () async {
       // arrange

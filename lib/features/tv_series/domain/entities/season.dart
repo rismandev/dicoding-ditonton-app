@@ -10,7 +10,7 @@ class Season extends Equatable {
   final int seasonNumber;
   final double voteAverage;
 
-  Season({
+  const Season({
     required this.airDate,
     required this.episodeCount,
     required this.id,
